@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# alias rsp='rake spec'
+# alias rspc='clear && rake spec'
+# alias car='clear && rake'
+# alias rss='rake spec SPEC'
+# alias rsa='rake spec:acceptance'
+# alias rsac='clear && rake spec:acceptance'
+# alias rsm='rake spec:models'
+# alias rsmc='clear && rake spec:models'
+# alias rsc='rake spec:controllers'
+# alias rscc='clear && rake spec:controllers'
+# alias rsh='rake spec:helpers'
+# alias rshc='clear && rake spec:helpers'
+# alias rsv='rake spec:views'
+# alias rsvc='clear && rake spec:views'
+# alias bersf='bundle exec rspec spec/ --fail-fast'
+
+alias rspec-all='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color --format=documentation'
+alias rspec-all-debug='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color --format=documentation --debugger'
+alias rspec-all-progress='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color'
+alias rspec-all-progress-debug='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color --debugger'
