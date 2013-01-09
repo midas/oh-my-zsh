@@ -1,17 +1,5 @@
 #!/bin/zsh
 
-alias rs='rails server'
-alias rsd='rails server --debugger'
-alias rsp='rails server -e production'
-alias rst='rails server -e test'
-alias rc='rails console'
-alias rcd='rails console --debugger'
-alias rcp='rails console production'
-alias rct='rails console test'
-alias rg='rails generate'
-alias rd='rails destroy'
-alias rp='rails plugin'
-
 alias bers='bundle exec rails server'
 alias bersd='bundle exec rails server --debugger'
 alias bersp='bundle exec rails server -e production'

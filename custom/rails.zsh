@@ -17,17 +17,3 @@ alias rdbmt='rake CONTEXTS=all db:mulligan --trace'
 alias rdbmtc='clear && rake CONTEXTS=all db:mulligan --trace'
 alias rdbmp='rake RAILS_ENV=production CONTEXTS=all db:mulligan'
 alias rdbmpt='rake RAILS_ENV=production CONTEXTS=all db:mulligan --trace'
-
-# Autotest
-alias at='autotest .'
-alias auto='autotest .'
-alias beat='bundle exec autotest .'
-alias beauto='bundle exec autotest .'
-alias beatit='bundle exec autotest --no-full-after-failed .'
-
-# Watchr
-alias watch="watchr ~/.watchr/rails.rb"
-
-# Request Log Analyzer
-alias rla='request-log-analyzer'
-alias rlad='request-log-analyzer log/development.log'
