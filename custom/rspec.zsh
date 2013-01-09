@@ -15,8 +15,3 @@
 # alias rsv='rake spec:views'
 # alias rsvc='clear && rake spec:views'
 # alias bersf='bundle exec rspec spec/ --fail-fast'
-
-alias rspec-all='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color --format=documentation'
-alias rspec-all-debug='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color --format=documentation --debugger'
-alias rspec-all-progress='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color'
-alias rspec-all-progress-debug='rspec spec/concerns spec/config spec/controllers spec/helpers spec/lib spec/models spec/requests spec/routing spec/views --color --debugger'
