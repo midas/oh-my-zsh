@@ -1,4 +1,5 @@
 #!/bin/zsh
+alias gs='git status'
 alias git-st='git status'
 alias git-br='git branch'
 alias git-br-contains='git branch --contains'
