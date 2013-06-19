@@ -18,6 +18,11 @@ function vimgrep() {
   vim `grep -rl $1 $dir`
 }
 
+function vimgitdiff() {
+  echo "Opening all files contained if git commit '$1' in Vim..."
+  vim `git diff-tree --no-commit-id --name-only -r $1`
+}
+
 function grepfiles() {
   if [ $2 ]; then
     dir=$2
@@ -27,23 +32,4 @@ function grepfiles() {
 
   echo "Looking for '$1' in $dir ..."
   find $dir -type f -exec grep $1 {} \; -print
-}
-
-function replace-in-files() {
-  searchterm=$1
-  replaceterm=$2
-  if [ $3 ]; then
-    dir=$3
-  else
-    dir='.'
-  fi
-
-  echo "Replacing '$searchterm' with '$replaceterm' in $dir ..."
-  for file in $(grep -l -R $searchterm $dir)
-    do
-      sed -e "s/$searchterm/$replaceterm/g" $file > /tmp/tempfile.tmp
-      mv /tmp/tempfile.tmp $file
-      echo "Modified: " $file
-  done
-  echo "Complete"
 }
