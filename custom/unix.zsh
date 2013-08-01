@@ -18,11 +18,6 @@ function vimgrep() {
   vim `grep -rl $1 $dir`
 }
 
-function vimgitdiff() {
-  echo "Opening all files contained if git commit '$1' in Vim..."
-  vim `git diff-tree --no-commit-id --name-only -r $1`
-}
-
 function grepfiles() {
   if [ $2 ]; then
     dir=$2
