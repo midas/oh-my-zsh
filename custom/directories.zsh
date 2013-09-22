@@ -9,6 +9,7 @@ iberon=/Users/cjharrelson/development/iberon
 ncite_server=/Users/cjharrelson/development/iberon/ncite_server
 ncite_pass_control_server=/Users/cjharrelson/development/iberon/ncite_pass_control_server
 ncite_pre_registration_server=/Users/cjharrelson/development/iberon/ncite_pre_registration_server
+ncite_enterprise_server=/Users/cjharrelson/development/iberon/ncite_enterprise_server
 npcs=/Users/cjharrelson/development/iberon/ncite_pass_control_server
 device_hub=/Users/cjharrelson/development/iberon/ncite_device_hub
 gvtus=/Users/cjharrelson/development/iberon/gvt-us
