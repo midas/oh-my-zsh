@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 local RVM_COLOR="cyan"
+local ASDF_COLOR="cyan"
 local NON_ROOT_USER_COLOR="green"
 local ROOT_USER_COLOR="red"
 local HOST_COLOR="green"
@@ -24,6 +25,26 @@ local user_host="%{$fg[$NCOLOR]%}%n%{$fg[$HOST_COLOR]%}@%M%{$reset_color%}"
 local current_dir="%~"
 local git_sha="$(git_prompt_short_sha)"
 local git_prompt='$(git_prompt_info)'
+
+function asdf_erlang_version() {
+  asdf current erlang | cut -d' ' -f1 
+}
+
+function asdf_elixir_version() {
+  asdf current elixir | cut -d' ' -f1 
+}
+
+function elixir_versions_str() {
+  erlang_version=$(asdf_erlang_version)
+  elixir_version=$(asdf_elixir_version)
+  echo "$fg[cyan]ex${reset_color}[$fg[cyan]$erlang_version$reset_color|$fg[cyan]$elixir_version$reset_color]"
+}
+
+function versions_str() {
+  if [ -f mix.exs ] ; then
+    echo "$(elixir_versions_str) "
+  fi
+}
 
 function vi_mode_prompt_info() {
   echo "${${KEYMAP/vicmd/$VI_MODE_EDIT_INDICATOR}/(main|viins)/$VI_MODE_TYPE_INDICATOR}"
@@ -49,7 +70,7 @@ function midas_precmd {
 
 function setprompt() {
   PROMPT='
-$user_host:$current_dir $ZSH_THEME_RVM_RUBY $(git_prompt_info)
+$user_host:$current_dir $(git_prompt_info)
 $(_vi_status) %{$fg[$PROMPT_COLOR]%}%(!.#.»)%{$reset_color%} '
 
   if [ $TIME_COLOR = "white" ]; then
